@@ -92,7 +92,7 @@ document.addEventListener("DOMContentLoaded", function(){
     request.send(new FormData(this));
     strong = document.createElement("strong");
     strong.innerText = "Sua mensagem foi enviada com sucesso.";
-    div = document.getElementById("contactForm");
+    div = document.querySelector("form");
     div.innerHTML = "";
     div.appendChild(strong);
     return false;
