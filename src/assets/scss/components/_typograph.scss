@@ -1,0 +1,28 @@
+// Typografia
+@import url('https://fonts.googleapis.com/css?family=Lato');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,500,600,700');
+@import url('https://fonts.googleapis.com/css?family=Poiret+One');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,600,700');
+
+$primary-font: 'Open Sans', sans-serif;
+$secondary-font: 'Poiret One', cursive;
+$lato-font: 'Lato', sans-serif;
+$montserrat: 'Montserrat', sans-serif;
+
+.t-primary {
+  font-family: $primary-font;
+  font-size: rem-calc(18);
+  font-weight: 600;
+  margin-bottom: 1.7em;
+  color: $blue-marine;
+}
+
+.text-primary {
+  font-family: $primary-font;
+  font-size: rem-calc(14);
+  color: $brown-light;
+}
+
+.t-center {
+  text-align: center!important;
+}

@@ -1,0 +1,56 @@
+form {
+  input[type='text'], input[type='email'], input[type='tel'], input[type='password'], textarea {
+    font-family: $primary-font;
+    font-size: rem-calc(14);
+    box-shadow: none;
+    border-radius: 3px;
+    padding: 1.7em;
+    background: none;
+
+    &:focus {
+      background: none!important;
+
+      &::-webkit-input-placeholder {
+        color: #656a72!important;
+      }
+      &::-moz-placeholder {
+        color: #656a72!important;
+      }
+      &:-ms-input-placeholder {
+        color: #656a72!important;
+      }
+      &:-moz-placeholder {
+        color: #656a72!important;
+      }
+    }
+  }
+
+  textarea {
+    height: 200px;
+  }
+
+  .submit {
+    font-family: $primary-font;
+    font-size: rem-calc(11);
+    font-weight: 600;
+    letter-spacing: 1px!important;
+    text-transform: uppercase;
+    border-radius: 40px;
+    color: #fff!important;
+    padding: 1.45em 3em !important;
+    background: #0072bc;
+    transition: all .15s ease-in-out;
+    cursor: pointer;
+  }
+	.error small.error, .error span.error, span.error, small.error {
+    display: none;
+    font-size: 0.66667rem;
+    font-style: italic;
+    font-weight: normal;
+    margin-bottom: 0.88889rem;
+    margin-top: -1px;
+    padding: 0.33333rem 0.5rem 0.5rem;
+    background: #f04124;
+    color: #FFFFFF;
+	}
+}

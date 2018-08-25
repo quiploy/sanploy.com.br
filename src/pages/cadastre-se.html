@@ -1,0 +1,27 @@
+<section class="dashboard grid-container">
+  <div class="dashboard-grid grid-x grid-margin-x align-middle align-center">
+    <div class="cell small-12">
+      <a class="logo"><img src="assets/img/logo.svg" /></a>
+
+      <form method="POST" class="login" novalidate="novalidate">
+        <div class="grid-container">
+          <div class="grid-x grid-padding-x align-center">
+            <h2 class="login-title small-12 cell">Criar conta</h2>
+            <div class="small-11 cell">
+              <input required type="email" placeholder="E-mail" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">
+            </div>
+            <div class="small-11 cell">
+              <input required type="password" placeholder="Senha" name="password">
+            </div>
+            <div class="small-11 cell">
+              <input type="submit" class="button submit" value="Realizar Login">
+            </div>
+          </div>
+        </div>
+      </form>
+
+      <a class="back" href="/">Voltar para o site</a>
+    </div>
+  </div>
+</section>
+<script src="{{root}}assets/js/signup.js"></script>
