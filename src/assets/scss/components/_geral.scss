@@ -1,3 +1,11 @@
+.footer-text a {
+  color: #ffffff;
+}
+
+.footer-text a:hover {
+  color: #3e4444;
+}
+
 .btn {
   font-family: $primary-font;
   font-size: rem-calc(11);
@@ -639,6 +647,11 @@
   .submit {
     margin: .5em 0;
   }
+}
+
+.cnpj {
+  margin-top: 1%;
+  text-align: center;
 }
 
 .footer {
