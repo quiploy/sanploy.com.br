@@ -3,18 +3,23 @@
     <div class="cell small-12">
       <a class="logo"><img src="assets/img/logo.svg" /></a>
 
-      <form method="POST" class="login" novalidate="novalidate">
+      <form method="POST" class="login">
         <div class="grid-container">
           <div class="grid-x grid-padding-x align-center">
             <h2 class="login-title small-12 cell">Criar conta</h2>
-            <div class="small-11 cell">
-              <input required type="email" placeholder="E-mail" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">
+            <div class="small-11 cell input-group">
+              <input type="text" id="subdomain" class="input-group-field" placeholder="Nome da Clínica" name="subdomain" required>
+              <span class="input-group-label">.sanploy.com.br</span>
             </div>
             <div class="small-11 cell">
-              <input required type="password" placeholder="Senha" name="password">
+              <input type="email" id="email" placeholder="E-mail" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required>
+            </div>
+            <div>
+              <input type="checkbox" id="terms" required>
+              <label for="terms">Aceito os<a href="/termos.html">Termos e Condições</a></label>
             </div>
             <div class="small-11 cell">
-              <input type="submit" class="button submit" value="Realizar Login">
+              <input type="submit" class="button submit" value="Realizar Cadastro">
             </div>
           </div>
         </div>
