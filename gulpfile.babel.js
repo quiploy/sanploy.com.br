@@ -61,6 +61,7 @@ function pages() {
       data: 'src/data/',
       helpers: 'src/helpers/'
     }))
+    .pipe(gulp.src(["robots.txt", "sitemap.xml"]))
     .pipe(gulp.dest(PATHS.dist));
 }
 
