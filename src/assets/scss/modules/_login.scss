@@ -1,3 +1,25 @@
+input::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #656565;
+  opacity: 1; /* Firefox */
+}
+input::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+  color: #656565;
+}
+input:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+  color: #656565;
+  opacity: 1;
+}
+input::-moz-placeholder { /* Mozilla Firefox 19+ */
+  color: #656565;
+  opacity: 1;
+}
+input:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: #656565;
+}
+input::-ms-input-placeholder { /* Microsoft Edge */
+  color: #656565;
+}
+
 .dashboard {
   &-grid {
     height: 100vh;
@@ -25,6 +47,7 @@
     font-weight: 600;
     text-align: center;
     color: #24344b;
+    padding-bottom: 0.7em;
     font-size: rem-calc(18);
   }
 
@@ -32,13 +55,16 @@
     border-color: #c6eaf7;
     transition: all .2s ease-in-out;
     max-width: 380px;
-    margin: 1em auto .2em;
     box-shadow: none!important;
 
     &:focus {
       border-color: #0072bc;
       border-left: 3px solid #0072bc;
     }
+  }
+  
+  .input-group-label {
+    margin-top: 0;
   }
 
   .submit {
