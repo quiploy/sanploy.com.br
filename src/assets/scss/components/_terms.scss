@@ -223,7 +223,7 @@ ol{
     font-weight:700;
     text-decoration:none;
     vertical-align:baseline;
-    font-size:20pt;
+    font-size:1.8em;
     font-family:$primary-font;
     color:#656a72;
     font-style:normal;
@@ -243,25 +243,24 @@ ol{
     font-style:normal
 }
 .c4{
-    margin-left:36pt;
-    padding-top:5pt;
-    padding-left:0pt;
-    padding-bottom:0pt;
+    margin-left:3em;
+    padding-top:0.41666666666em;
+    padding-left:0;
+    padding-bottom:0;
     line-height:1.5;
     orphans:2;
     widows:2;
     text-align:justify;
 }
 .c5{
-    padding-top:10pt;
-    padding-bottom:10pt;
+    padding-top:0.83333333333em;
+    padding-bottom:0.83333333333em;
     line-height:1.5;
     orphans:2;
     widows:2;
     text-align:center
 }
 .c6{
-    font-size:20pt;
     font-family:$primary-font;
     font-weight:700;
     color: #656a72;
@@ -275,23 +274,20 @@ ol{
     font-style:normal
 }
 .c8{
-    margin-left:0pt;
-    padding-top:0pt;
-    padding-left:0pt;
-    padding-bottom:0pt;
+    margin-left:0;
+    padding-top:0;
+    padding-left:0;
+    padding-bottom:0;
     line-height:1.5;
     orphans:2;
     widows:2;
     text-align:justify;
-    font-family:$primary-font;
-    font-size: 18pt;
-    color:#656a72;
 }
 .c9{
-    margin-left:72pt;
-    padding-top:0pt;
-    padding-left:0pt;
-    padding-bottom:0pt;
+    margin-left:6em;
+    padding-top:0;
+    padding-left:0;
+    padding-bottom:0;
     line-height:1.5;
     orphans:2;
     widows:2;
@@ -311,9 +307,9 @@ ol{
     font-weight:400
 }
 .c17{
-    margin-left:36pt;
-    padding-top:0pt;
-    padding-bottom:0pt;
+    margin-left:3em;
+    padding-top:0;
+    padding-bottom:0;
     line-height:1.5;
     orphans:2;
     widows:2;
@@ -328,10 +324,36 @@ ol{
     font-size: 1em;
     font-family:$primary-font;
 }
-.container{
-    max-width:800.5pt;
-    padding:72pt 72pt 72pt 72pt;
-    margin: 0 auto;
+@media only screen and (min-width: 300px) {
+  /* For mobile phones: */
+  .container{
+      max-width:66.7083333333em;
+      padding:5em 2em 2em 2em;
+      margin: 0 auto;
+  }
+  .c4{
+      margin-left:1em;
+  }
+  .c6{
+      font-size:1.1em;
+  }
+  .c9{
+      margin-left:2em;
+  }
+  .c17{
+      margin-left:1em;
+  }
+}
+@media only screen and (min-width: 600px) {
+  /* For tablets and desktops: */
+  .container{
+      max-width:66.7083333333em;
+      padding:6em 6em 6em 6em;
+      margin: 0 auto;
+  }
+  .c6{
+      font-size:1.5em;
+  }
 }
 .info-block-text p {
   font-family: $primary-font;
