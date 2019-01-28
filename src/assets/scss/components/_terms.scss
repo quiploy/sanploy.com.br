@@ -2,23 +2,28 @@
 .lst-kix_ngs1h2ka0urd-8>li:before{
     content:"" counter(lst-ctn-kix_ngs1h2ka0urd-0,decimal) "." counter(lst-ctn-kix_ngs1h2ka0urd-1,decimal) "." counter(lst-ctn-kix_ngs1h2ka0urd-2,decimal) "." counter(lst-ctn-kix_ngs1h2ka0urd-3,decimal) "." counter(lst-ctn-kix_ngs1h2ka0urd-4,decimal) "." counter(lst-ctn-kix_ngs1h2ka0urd-5,decimal) "." counter(lst-ctn-kix_ngs1h2ka0urd-6,decimal) "." counter(lst-ctn-kix_ngs1h2ka0urd-7,decimal) "." counter(lst-ctn-kix_ngs1h2ka0urd-8,decimal) ". "
 }
+
 ol.lst-kix_list_1-3{
     list-style-type:none
 }
+
 ol.lst-kix_list_1-4{
     list-style-type:none
 }
+
 ol.lst-kix_list_1-5{
     list-style-type:none
 }
+
 ol.lst-kix_list_1-6{
     list-style-type:none
 }
+
 .lst-kix_ngs1h2ka0urd-6>li:before{
-    content:"" counter(lst-ctn-kix_ngs1h2ka0urd-0,decimal) "." counter(lst-ctn-kix_ngs1h2ka0urd-1,decimal) "." counter(lst-ctn-kix_ngs1h2ka0urd-2,decimal) "." counter(lst-ctn-kix_ngs1h2ka0urd-3,decimal) "." counter(lst-ctn-kix_ngs1h2ka0urd-4,decimal) "." counter(lst-ctn-kix_ngs1h2ka0urd-5,decimal) "." counter(lst-ctn-kix_ngs1h2ka0urd-6,decimal) ". "
+  content:"" counter(lst-ctn-kix_ngs1h2ka0urd-0,decimal) "." counter(lst-ctn-kix_ngs1h2ka0urd-1,decimal) "." counter(lst-ctn-kix_ngs1h2ka0urd-2,decimal) "." counter(lst-ctn-kix_ngs1h2ka0urd-3,decimal) "." counter(lst-ctn-kix_ngs1h2ka0urd-4,decimal) "." counter(lst-ctn-kix_ngs1h2ka0urd-5,decimal) "." counter(lst-ctn-kix_ngs1h2ka0urd-6,decimal) ". "
 }
 ol.lst-kix_list_1-0{
-    list-style-type:none
+  list-style-type:none
 }
 .lst-kix_ngs1h2ka0urd-7>li:before{
     content:"" counter(lst-ctn-kix_ngs1h2ka0urd-0,decimal) "." counter(lst-ctn-kix_ngs1h2ka0urd-1,decimal) "." counter(lst-ctn-kix_ngs1h2ka0urd-2,decimal) "." counter(lst-ctn-kix_ngs1h2ka0urd-3,decimal) "." counter(lst-ctn-kix_ngs1h2ka0urd-4,decimal) "." counter(lst-ctn-kix_ngs1h2ka0urd-5,decimal) "." counter(lst-ctn-kix_ngs1h2ka0urd-6,decimal) "." counter(lst-ctn-kix_ngs1h2ka0urd-7,decimal) ". "
@@ -244,6 +249,9 @@ ol{
 }
 .c4{
     margin-left:3em;
+    font-size: 0.95em;
+    font-weight:400;
+    font-family:$primary-font;
     padding-top:0.41666666666em;
     padding-left:0;
     padding-bottom:0;
@@ -348,7 +356,7 @@ ol{
   /* For tablets and desktops: */
   .container{
       max-width:66.7083333333em;
-      padding:6em 6em 6em 6em;
+      padding:6em 0 0 0;
       margin: 0 auto;
   }
   .c6{
@@ -361,4 +369,7 @@ ol{
   font-size: rem-calc(13);
   font-weight: 500;
   margin-bottom: 5px;
+}
+.definition li {
+  list-style-type: lower-latin;
 }
