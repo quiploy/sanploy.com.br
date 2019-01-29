@@ -56,7 +56,10 @@ document.addEventListener("DOMContentLoaded", function() {
   })
 
   form.addEventListener("submit", function(evt){
-    var error = false, data = {};
+    var error = false,
+      center = document.createElement("center"),
+      strong = document.createElement("strong"),
+      data = {};
     document.querySelector("input[type='submit']").value = "Processando...."
     document.querySelector("input[type='submit']").disabled = true;
     evt.preventDefault();
@@ -79,10 +82,15 @@ document.addEventListener("DOMContentLoaded", function() {
         data: data,
       })
       .then(function (response) {
-        var center = document.createElement("center"),
-          strong = document.createElement("strong");
         form.reset();
-        strong.innerText = "Seja bem-vinda(o)! Você vai receber um email em instantes com todas as instruções.";
+        strong.innerText = response.data.response;
+        center.appendChild(strong);
+        form.innerHTML = "";
+        form.appendChild(center);
+      })
+      .catch(function (error) {
+        form.reset();
+        strong.innerText = "Desculpa, tivemos um problema com o seu cadastro. Por favor, nos envie um e-mail para suporte@sanploy.com.br";
         center.appendChild(strong);
         form.innerHTML = "";
         form.appendChild(center);
