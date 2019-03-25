@@ -16,6 +16,16 @@ function subdomainValid() {
   x.setCustomValidity('');
 }
 
+function phoneInvalid() {
+  var x = document.getElementById("phone");
+  x.setCustomValidity('Por favor, coloque seu contato.');
+}
+
+function phoneValid() {
+  var x = document.getElementById("phone");
+  x.setCustomValidity('');
+}
+
 function emailInvalid() {
   var x = document.getElementById("email");
   x.setCustomValidity('Por favor, preencha com seu e-mail.');
@@ -36,6 +46,24 @@ function termValid() {
   x.setCustomValidity('');
 }
 
+function formatPhone(evt) {
+  var el = evt.target, value;
+  value = el.value.replace(/\D/g, "");
+  value = value.replace(/^(\d{2})(\d)/g, "($1) $2");
+  value = value.replace(/(\d)(\d{4})$/, "$1-$2");
+  el.value = value;
+}
+
+function checkPhone() {
+  var el;
+  el = document.getElementById("phone");
+  if (el) {
+    el.addEventListener("input", formatPhone);
+  }
+}
+
+document.addEventListener("DOMContentLoaded", checkPhone);
+
 document.addEventListener("DOMContentLoaded", function() {
   var baseUrl = "https://app.sanploy.com.br/",
     form = document.querySelector("form");
@@ -43,6 +71,8 @@ document.addEventListener("DOMContentLoaded", function() {
   document.getElementById("subdomain").addEventListener("keyup", fixString);
   document.getElementById("subdomain").addEventListener("invalid", subdomainInvalid);
   document.getElementById("subdomain").addEventListener("change", subdomainValid);
+  document.getElementById("phone").addEventListener("invalid", phoneInvalid);
+  document.getElementById("phone").addEventListener("change", phoneValid);
   document.getElementById("email").addEventListener("invalid", emailInvalid);
   document.getElementById("email").addEventListener("change", emailValid);
   document.getElementById("terms").addEventListener("invalid", termInvalid);
@@ -77,6 +107,7 @@ document.addEventListener("DOMContentLoaded", function() {
       axios.get(baseUrl + "users/", {
         params: {
           subdomain: data["subdomain"],
+          phone: data["phone"],
           email: data["email"]
         }
       })
