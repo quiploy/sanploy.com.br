@@ -13,7 +13,7 @@
     "aos": "^2.3.2",
     "axios": "^0.18.0",
     "foundation-sites": "^6.5.1",
-    "jquery": "^3.2.1",
+    "jquery": "^3.4.0",
     "motion-ui": "^2.0.3",
     "owl.carousel": "^2.3.4",
     "slick-carousel": "^1.8.1",
