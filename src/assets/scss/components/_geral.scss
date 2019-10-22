@@ -855,6 +855,9 @@
 
 // custom
 @media print, screen and (min-width: 60em) {
+  .preco-item {
+    margin-left: 4rem !important;
+  }
   .grid-margin-x > .medium-6 {
     width: calc(50% - 2.875rem);
   }
