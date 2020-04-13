@@ -2,8 +2,13 @@
 import axios from 'axios';
 
 function fixString() {
-  var x = document.getElementById("subdomain");
+  var x = document.getElementById("subdomain"),
+    regex = /^[0-9a-z].(?:[\w-]+)[0-9a-z]$/g;
+
   x.value = x.value.toLowerCase().replace(/\s+/g, '');
+  if (x.value.match(regex) === null && x.value !== "") {
+    x.value = x.value.normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/([^a-z0-9]+)/gi, "");
+  }
 }
 
 function subdomainInvalid() {
