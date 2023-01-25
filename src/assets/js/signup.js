@@ -82,14 +82,15 @@ document.addEventListener("DOMContentLoaded", function() {
   document.getElementById("email").addEventListener("change", emailValid);
   document.getElementById("terms").addEventListener("invalid", termInvalid);
   document.getElementById("terms").addEventListener("change", termValid);
-  axios({
+  document.querySelectorAll('input, select, button, textarea').forEach(elem => elem.disabled = true);
+
+  /*axios({
     method: 'get',
     url: baseUrl + "get_token",
   })
   .then(function (response) {
-    document.querySelectorAll('input, select, button, textarea').forEach(elem => elem.disabled = true);
-    //form.querySelector("input[name='csrfmiddlewaretoken']").value = response.data.csrf_token;
-  })
+    form.querySelector("input[name='csrfmiddlewaretoken']").value = response.data.csrf_token;
+  })*/
 
   form.addEventListener("submit", function(evt){
     var error = false,
