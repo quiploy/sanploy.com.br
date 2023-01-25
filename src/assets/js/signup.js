@@ -87,7 +87,8 @@ document.addEventListener("DOMContentLoaded", function() {
     url: baseUrl + "get_token",
   })
   .then(function (response) {
-    form.querySelector("input[name='csrfmiddlewaretoken']").value = response.data.csrf_token;
+    document.querySelectorAll('input, select, button, textarea').forEach(elem => elem.disabled = true);
+    //form.querySelector("input[name='csrfmiddlewaretoken']").value = response.data.csrf_token;
   })
 
   form.addEventListener("submit", function(evt){
@@ -96,7 +97,9 @@ document.addEventListener("DOMContentLoaded", function() {
       strong = document.createElement("strong"),
       data = {};
     evt.preventDefault();
-    document.querySelectorAll("input").forEach(
+    return;
+    
+    /*document.querySelectorAll("input").forEach(
       function (el) {
         if (el.className.indexOf("submit") === -1 && el.value === "" || (el.type == "email" && !el.checkValidity())) {
           el.style["border-color"] = "red";
@@ -163,6 +166,6 @@ document.addEventListener("DOMContentLoaded", function() {
           form.appendChild(center);
         }
       })
-    }
+    }*/
   });
 });
