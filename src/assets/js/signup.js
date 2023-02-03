@@ -98,7 +98,6 @@ document.addEventListener("DOMContentLoaded", function() {
       strong = document.createElement("strong"),
       data = {};
     evt.preventDefault();
-    return;
     
     document.querySelectorAll("input").forEach(
       function (el) {
