@@ -82,9 +82,9 @@ document.addEventListener("DOMContentLoaded", function() {
   document.getElementById("email").addEventListener("change", emailValid);
   document.getElementById("terms").addEventListener("invalid", termInvalid);
   document.getElementById("terms").addEventListener("change", termValid);
-  //document.querySelectorAll('input, select, button, textarea').forEach(elem => elem.disabled = true);
+  document.querySelectorAll('input, select, button, textarea').forEach(elem => elem.disabled = true);
 
-  axios({
+  /*axios({
     method: 'get',
     url: baseUrl + "get_token",
   })
@@ -98,6 +98,7 @@ document.addEventListener("DOMContentLoaded", function() {
       strong = document.createElement("strong"),
       data = {};
     evt.preventDefault();
+    return;
     
     document.querySelectorAll("input").forEach(
       function (el) {
@@ -166,6 +167,6 @@ document.addEventListener("DOMContentLoaded", function() {
           form.appendChild(center);
         }
       })
-    }
+    }*/
   });
 });
